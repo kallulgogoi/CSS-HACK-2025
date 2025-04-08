@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InvolveU - Campus Engagement Platform</title>
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barriecito&family=Big+Shoulders+Stencil:opsz,wght@10..72,100..900&family=Big+Shoulders:opsz,wght@10..72,100..900&family=Dancing+Script:wght@400..700&family=Honk:SHLN@17&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+   
+</head>
+<body>
+    <!-- Scroll to Top Button -->
+    <div class="scroll-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div class="navbar-brand">
+                <img src="logo.png" alt="InvolveU Logo"class="logo">
+                <span class="brand-name">InvolveU</span>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="#events"><i class="fas fa-calendar-alt"></i> Events</a></li>
+                <li class="nav-item"><a href="#clubs"><i class="fas fa-users"></i> Clubs</a></li>
+                <li class="nav-item"><a href="#societies"><i class="fas fa-landmark"></i> Societies</a></li>
+                <li class="nav-item"><a href="#developers"><i class="fas fa-code"></i> Developers</a></li>
+                <li class="nav-item notification">
+                    <a href="#notifications">
+                        <i class="fas fa-bell"></i>
+                        <span class="badge">3</span>
+                    </a>
+                </li>
+                <li class="nav-item profile">
+                    <a href="profile.html">
+                        <img src="https://via.placeholder.com/36x36" alt="Profile" class="profile-pic">
+                    </a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- About Section -->
+    <section class="about-section">
+        <div class="container">
+            <h1>Welcome to InvolveU</h1>
+            <p>Your one-stop platform for all campus activities, events, clubs, and societies. Connect, engage, and grow with your campus community.</p>
+            <div class="stats">
+                <div class="stat-item">
+                    <span class="number">50+</span>
+                    <span class="label">Events</span>
+                </div>
+                <div class="stat-item">
+                    <span class="number">30+</span>
+                    <span class="label">Clubs</span>
+                </div>
+                <div class="stat-item">
+                    <span class="number">10+</span>
+                    <span class="label">Societies</span>
+                </div>
+                <div class="stat-item">
+                    <span class="number">5000+</span>
+                    <span class="label">Students</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Events Section -->
+    <section class="events-section" id="events">
+        <div class="container">
+            <h2 class="section-title">Events</h2>
+            <div class="event-tabs">
+                <button class="tab-btn active" data-tab="upcoming">Upcoming</button>
+                <button class="tab-btn" data-tab="ongoing">Ongoing</button>
+                <button class="tab-btn" data-tab="past">Past</button>
+            </div>
+            
+            <div class="event-carousel-container">
+                <!-- Upcoming Events -->
+                <div class="event-carousel" id="upcoming-events">
+                    <div class="event-card">
+                        <span class="event-organizer">Tech Club</span>
+                        <img src="https://images.unsplash.com/photo-1517430816045-df4b7de11d1d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Tech Symposium 2023" class="event-image">
+                        <div class="event-details">
+                            <h3 class="event-title">Tech Symposium 2023</h3>
+                            <div class="event-date">
+                                <i class="far fa-calendar-alt"></i>
+                                Oct 15, 2023
+                            </div>
+                            <p class="event-description">Annual technology conference featuring industry leaders and workshops on AI, blockchain, and cloud computing.</p>
+                            <span class="event-status status-upcoming">Upcoming</span>
+                        </div>
+                        <div class="event-hover-content">
+                            <h3>Tech Symposium 2023</h3>
+                            <p>Join us for a day of innovation and learning with top tech experts from around the world.</p>
+                            <button class="register-btn-event">Register Now</button>
+                            <a href="https://docs.google.com/forms/d/12s4Bcvh39fP0cykyC4eTW-ZMyC7Y7FdJlxrNbhXhh1k/edit" target="_blank" class="google-form-link">
+                                <i class="fab fa-google"></i> Google Form Registration
+                            </a>
+                        </div>
+                    </div>
+                    <div class="event-card">
+                        <span class="event-organizer">Cultural Club</span>
+                        <img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Cultural Fest" class="event-image">
+                        <div class="event-details">
+                            <h3 class="event-title">Cultural Fest</h3>
+                            <div class="event-date">
+                                <i class="far fa-calendar-alt"></i>
+                                Nov 5, 2023
+                            </div>
+                            <p class="event-description">Celebrate diversity with performances, food, and activities from around the world in our annual cultural festival.</p>
+                            <span class="event-status status-upcoming">Upcoming</span>
+                        </div>
+                        <div class="event-hover-content">
+                            <h3>Cultural Fest</h3>
+                            <p>Experience the rich diversity of our campus community through music, dance, and cuisine.</p>
+                            <button class="register-btn-event">Register Now</button>
+                            <a href="https://docs.google.com/forms/d/12s4Bcvh39fP0cykyC4eTW-ZMyC7Y7FdJlxrNbhXhh1k/edit" target="_blank" class="google-form-link">
+                                <i class="fab fa-google"></i> Google Form Registration
+                            </a>
+                        </div>
+                    </div>
+                    <div class="event-card">
+                        <span class="event-organizer">Entrepreneurship Club</span>
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Startup Pitch Competition" class="event-image">
+                        <div class="event-details">
+                            <h3 class="event-title">Startup Pitch Competition</h3>
+                            <div class="event-date">
+                                <i class="far fa-calendar-alt"></i>
+                                Oct 28, 2023
+                            </div>
+                            <p class="event-description">Students pitch their startup ideas to a panel of investors for funding and mentorship opportunities.</p>
+                            <span class="event-status status-upcoming">Upcoming</span>
+                        </div>
+                        <div class="event-hover-content">
+                            <h3>Startup Pitch Competition</h3>
+                            <p>Showcase your entrepreneurial idea and compete for seed funding and mentorship.</p>
+                            <button class="register-btn-event">Register Now</button>
+                            <a href="https://docs.google.com/forms/d/12s4Bcvh39fP0cykyC4eTW-ZMyC7Y7FdJlxrNbhXhh1k/edit" target="_blank" class="google-form-link">
+                                <i class="fab fa-google"></i> Google Form Registration
+                            </a>
+                        </div>
+                    </div>
+                    <div class="event-card">
+                        <span class="event-organizer">Coding Club</span>
+                        <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Hackathon" class="event-image">
+                        <div class="event-details">
+                            <h3 class="event-title">Hackathon</h3>
+                            <div class="event-date">
+                                <i class="far fa-calendar-alt"></i>
+                                Nov 12, 2023
+                            </div>
+                            <p class="event-description">48-hour coding competition with exciting prizes and opportunities to showcase your technical skills.</p>
+                            <span class="event-status status-upcoming">Upcoming</span>
+                        </div>
+                        <div class="event-hover-content">
+                            <h3>Hackathon</h3>
+                            <p>Join fellow coders for an intense weekend of problem-solving and innovation.</p>
+                            <button class="register-btn-event">Register Now</button>
+                            <a href="https://docs.google.com/forms/d/12s4Bcvh39fP0cykyC4eTW-ZMyC7Y7FdJlxrNbhXhh1k/edit" target="_blank" class="google-form-link">
+                                <i class="fab fa-google"></i> Google Form Registration
+                            </a>
+                        </div>
+                    </div>
+                    <div class="event-card">
+                        <span class="event-organizer">Career Services</span>
+                        <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Career Fair" class="event-image">
+                        <div class="event-details">
+                            <h3 class="event-title">Career Fair</h3>
+                            <div class="event-date">
+                                <i class="far fa-calendar-alt"></i>
+                                Dec 3, 2023
+                            </div>
+                            <p class="event-description">Connect with top employers and explore internship and job opportunities across various industries.</p>
+                            <span class="event-status status-upcoming">Upcoming</span>
+                        </div>
+                        <div class="event-hover-content">
+                            <h3>Career Fair</h3>
+                            <p>Meet potential employers and kickstart your professional journey.</p>
+                            <button class="register-btn-event">Register Now</button>
+                            <a href="https://docs.google.com/forms/d/12s4Bcvh39fP0cykyC4eTW-ZMyC7Y7FdJlxrNbhXhh1k/edit" target="_blank" class="google-form-link">
+                                <i class="fab fa-google"></i> Google Form Registration
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Duplicate for infinite scroll -->
+                    <div class="event-card">
+                        <span class="event-organizer">Tech Club</span>
+                        <img src="https://images.unsplash.com/photo-1517430816045-df4b7de11d1d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Tech Symposium 2023" class="event-image">
+                        <div class="event-details">
+                            <h3 class="event-title">Tech Symposium 2023</h3>
+                            <div class="event-date">
+                                <i class="far fa-calendar-alt"></i>
+                                Oct 15, 2023
+                            </div>
+                            <p class="event-description">Annual technology conference featuring industry leaders and workshops on AI, blockchain, and cloud computing.</p>
+                            <span class="event-status status-upcoming">Upcoming</span>
+                        </div>
+                        <div class="event-hover-content">
+                            <h3>Tech Symposium 2023</h3>
+                            <p>Join us for a day of innovation and learning with top tech experts from around the world.</p>
+                            <button class="register-btn-event">Register Now</button>
+                            <a href="https://docs.google.com/forms/d/12s4Bcvh39fP0cykyC4eTW-ZMyC7Y7FdJlxrNbhXhh1k/edit" target="_blank" class="google-form-link">
+                                <i class="fab fa-google"></i> Google Form Registration
+                            </a>
+                        </div>
+                    </div>
+                    <div class="event-card">
+                        <span class="event-organizer">Cultural Club</span>
+                        <img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Cultural Fest" class="event-image">
+                        <div class="event-details">
+                            <h3 class="event-title">Cultural Fest</h3>
+                            <div class="event-date">
+                                <i class="far fa-calendar-alt"></i>
+                                Nov 5, 2023
+                            </div>
+                            <p class="event-description">Celebrate diversity with performances, food, and activities from around the world in our annual cultural festival.</p>
+                            <span class="event-status status-upcoming">Upcoming</span>
+                        </div>
+                        <div class="event-hover-content">
+                            <h3>Cultural Fest</h3>
+                            <p>Experience the rich diversity of our campus community through music, dance, and cuisine.</p>
+                            <button class="register-btn-event">Register Now</button>
+                            <a href="https://docs.google.com/forms/d/12s4Bcvh39fP0cykyC4eTW-ZMyC7Y7FdJlxrNbhXhh1k/edit" target="_blank" class="google-form-link">
+                                <i class="fab fa-google"></i> Google Form Registration
+                            </a>
+                        </div>
+                    </div>
+                    <div class="event-card">
+                        <span class="event-organizer">Entrepreneurship Club</span>
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Startup Pitch Competition" class="event-image">
+                        <div class="event-details">
+                            <h3 class="event-title">Startup Pitch Competition</h3>
+                            <div class="event-date">
+                                <i class="far fa-calendar-alt"></i>
+                                Oct 28, 2023
+                            </div>
+                            <p class="event-description">Students pitch their startup ideas to a panel of investors for funding and mentorship opportunities.</p>
+                            <span class="event-status status-upcoming">Upcoming</span>
+                        </div>
+                        <div class="event-hover-content">
+                            <h3>Startup Pitch Competition</h3>
+                            <p>Showcase your entrepreneurial idea and compete for seed funding and mentorship.</p>
+                            <button class="register-btn-event">Register Now</button>
+                            <a href="https://docs.google.com/forms/d/12s4Bcvh39fP0cykyC4eTW-ZMyC7Y7FdJlxrNbhXhh1k/edit" target="_blank" class="google-form-link">
+                                <i class="fab fa-google"></i> Google Form Registration
+                            </a>
+                        </div>
+                    </div>
+                    <div class="event-card">
+                        <span class="event-organizer">Coding Club</span>
+                        <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Hackathon" class="event-image">
+                        <div class="event-details">
+                            <h3 class="event-title">Hackathon</h3>
+                            <div class="event-date">
+                                <i class="far fa-calendar-alt"></i>
+                                Nov 12, 2023
+                            </div>
+                            <p class="event-description">48-hour coding competition with exciting prizes and opportunities to showcase your technical skills.</p>
+                            <span class="event-status status-upcoming">Upcoming</span>
+                        </div>
+                        <div class="event-hover-content">
+                            <h3>Hackathon</h3>
+                            <p>Join fellow coders for an intense weekend of problem-solving and innovation.</p>
+                            <button class="register-btn-event">Register Now</button>
+                            <a href="https://docs.google.com/forms/d/12s4Bcvh39fP0cykyC4eTW-ZMyC7Y7FdJlxrNbhXhh1k/edit" target="_blank" class="google-form-link">
+                                <i class="fab fa-google"></i> Google Form Registration
+                            </a>
+                        </div>
+                    </div>
+                    <div class="event-card">
+                        <span class="event-organizer">Career Services</span>
+                        <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Career Fair" class="event-image">
+                        <div class="event-details">
+                            <h3 class="event-title">Career Fair</h3>
+                            <div class="event-date">
+                                <i class="far fa-calendar-alt"></i>
+                                Dec 3, 2023
+                            </div>
+                            <p class="event-description">Connect with top employers and explore internship and job opportunities across various industries.</p>
+                            <span class="event-status status-upcoming">Upcoming</span>
+                        </div>
+                        <div class="event-hover-content">
+                            <h3>Career Fair</h3>
+                            <p>Meet potential employers and kickstart your professional journey.</p>
+                            <button class="register-btn-event">Register Now</button>
+                            <a href="https://docs.google.com/forms/d/12s4Bcvh39fP0cykyC4eTW-ZMyC7Y7FdJlxrNbhXhh1k/edit" target="_blank" class="google-form-link">
+                                <i class="fab fa-google"></i> Google Form Registration
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Ongoing Events -->
+                <div class="event-carousel" id="ongoing-events" style="display: none;">
+                    <div class="event-card">
+                        <span class="event-organizer">Sports Club</span>
+                        <img src="https://images.unsplash.com/photo-1547347298-4074fc3086f0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Sports Week" class="event-image">
+                        <div class="event-details">
+                            <h3 class="event-title">Sports Week</h3>
+                            <div class="event-date">
+                                <i class="far fa-calendar-alt"></i>
+                                Oct 5-12, 2023
+                            </div>
+                            <p class="event-description">Inter-department sports competitions happening all week with various games and tournaments.</p>
+                            <span class="event-status status-ongoing">Ongoing</span>
+                        </div>
+                    </div>
+                    <div class="event-card">
+                        <span class="event-organizer">Art Club</span>
+                        <img src="https://images.unsplash.com/photo-1536922246289-88c42f957773?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Art Exhibition" class="event-image">
+                        <div class="event-details">
+                            <h3 class="event-title">Art Exhibition</h3>
+                            <div class="event-date">
+                                <i class="far fa-calendar-alt"></i>
+                                Oct 1-15, 2023
+                            </div>
+                            <p class="event-description">Showcasing student artwork in the campus gallery with various mediums and styles on display.</p>
+                            <span class="event-status status-ongoing">Ongoing</span>
+                        </div>
+                    </div>
+                    <!-- Duplicate for infinite scroll -->
+                    <div class="event-card">
+                        <span class="event-organizer">Sports Club</span>
+                        <img src="https://images.unsplash.com/photo-1547347298-4074fc3086f0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Sports Week" class="event-image">
+                        <div class="event-details">
+                            <h3 class="event-title">Sports Week</h3>
+                            <div class="event-date">
+                                <i class="far fa-calendar-alt"></i>
+                                Oct 5-12, 2023
+                            </div>
+                            <p class="event-description">Inter-department sports competitions happening all week with various games and tournaments.</p>
+                            <span class="event-status status-ongoing">Ongoing</span>
+                        </div>
+                    </div>
+                    <div class="event-card">
+                        <span class="event-organizer">Art Club</span>
+                        <img src="https://images.unsplash.com/photo-1536922246289-88c42f957773?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Art Exhibition" class="event-image">
+                        <div class="event-details">
+                            <h3 class="event-title">Art Exhibition</h3>
+                            <div class="event-date">
+                                <i class="far fa-calendar-alt"></i>
+                                Oct 1-15, 2023
+                            </div>
+                            <p class="event-description">Showcasing student artwork in the campus gallery with various mediums and styles on display.</p>
+                            <span class="event-status status-ongoing">Ongoing</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Past Events -->
+                <div class="event-carousel" id="past-events" style="display: none;">
+                    <div class="event-card">
+                        <span class="event-organizer">Student Union</span>
+                        <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Orientation Week" class="event-image">
+                        <div class="event-details">
+                            <h3 class="event-title">Orientation Week</h3>
+                            <div class="event-date">
+                                <i class="far fa-calendar-alt"></i>
+                                Sep 1-7, 2023
+                            </div>
+                            <p class="event-description">Welcome event for new students with activities, campus tours, and information sessions.</p>
+                            <span class="event-status status-past">Past</span>
+                        </div>
+                    </div>
+                    <div class="event-card">
+                        <span class="event-organizer">Science Club</span>
+                        <img src="https://images.unsplash.com/photo-1575505586569-646b2ca898fc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Science Fair" class="event-image">
+                        <div class="event-details">
+                            <h3 class="event-title">Science Fair</h3>
+                            <div class="event-date">
+                                <i class="far fa-calendar-alt"></i>
+                                Aug 20, 2023
+                            </div>
+                            <p class="event-description">Student projects and experiments showcase featuring innovative scientific research.</p>
+                            <span class="event-status status-past">Past</span>
+                        </div>
+                    </div>
+                    <div class="event-card">
+                        <span class="event-organizer">Music Club</span>
+                        <img src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Music Festival" class="event-image">
+                        <div class="event-details">
+                            <h3 class="event-title">Music Festival</h3>
+                            <div class="event-date">
+                                <i class="far fa-calendar-alt"></i>
+                                Jul 15, 2023
+                            </div>
+                            <p class="event-description">Annual music event featuring student bands, solo performers, and guest artists.</p>
+                            <span class="event-status status-past">Past</span>
+                        </div>
+                    </div>
+                    <!-- Duplicate for infinite scroll -->
+                    <div class="event-card">
+                        <span class="event-organizer">Student Union</span>
+                        <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Orientation Week" class="event-image">
+                        <div class="event-details">
+                            <h3 class="event-title">Orientation Week</h3>
+                            <div class="event-date">
+                                <i class="far fa-calendar-alt"></i>
+                                Sep 1-7, 2023
+                            </div>
+                            <p class="event-description">Welcome event for new students with activities, campus tours, and information sessions.</p>
+                            <span class="event-status status-past">Past</span>
+                        </div>
+                    </div>
+                    <div class="event-card">
+                        <span class="event-organizer">Science Club</span>
+                        <img src="https://images.unsplash.com/photo-1575505586569-646b2ca898fc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Science Fair" class="event-image">
+                        <div class="event-details">
+                            <h3 class="event-title">Science Fair</h3>
+                            <div class="event-date">
+                                <i class="far fa-calendar-alt"></i>
+                                Aug 20, 2023
+                            </div>
+                            <p class="event-description">Student projects and experiments showcase featuring innovative scientific research.</p>
+                            <span class="event-status status-past">Past</span>
+                        </div>
+                    </div>
+                    <div class="event-card">
+                        <span class="event-organizer">Music Club</span>
+                        <img src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Music Festival" class="event-image">
+                        <div class="event-details">
+                            <h3 class="event-title">Music Festival</h3>
+                            <div class="event-date">
+                                <i class="far fa-calendar-alt"></i>
+                                Jul 15, 2023
+                            </div>
+                            <p class="event-description">Annual music event featuring student bands, solo performers, and guest artists.</p>
+                            <span class="event-status status-past">Past</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Clubs Section -->
+    <section class="clubs-section" id="clubs">
+        <div class="container">
+            <h2 class="section-title">Clubs</h2>
+            <div class="club-registration">
+                <h3>Club Registrations Open</h3>
+                <div class="registration-cards">
+                    <div class="registration-card">
+                        <h4 class="registration-title">Debate Club</h4>
+                        <div class="registration-deadline">
+                            <i class="far fa-clock"></i>
+                            Deadline: Oct 20, 2023
+                        </div>
+                        <p>Join our debate team and improve your public speaking and critical thinking skills.</p>
+                        <a href="#" class="register-btn">Register Now</a>
+                    </div>
+                    <div class="registration-card">
+                        <h4 class="registration-title">Robotics Club</h4>
+                        <div class="registration-deadline">
+                            <i class="far fa-clock"></i>
+                            Deadline: Oct 25, 2023
+                        </div>
+                        <p>For students interested in robotics, automation, and building innovative machines.</p>
+                        <a href="#" class="register-btn">Register Now</a>
+                    </div>
+                    <div class="registration-card">
+                        <h4 class="registration-title">Photography Club</h4>
+                        <div class="registration-deadline">
+                            <i class="far fa-clock"></i>
+                            Deadline: Nov 1, 2023
+                        </div>
+                        <p>Learn photography techniques, participate in photo walks, and showcase your work.</p>
+                        <a href="#" class="register-btn">Register Now</a>
+                    </div>
+                    <div class="registration-card">
+                        <h4 class="registration-title">Entrepreneurship Club</h4>
+                        <div class="registration-deadline">
+                            <i class="far fa-clock"></i>
+                            Deadline: Oct 30, 2023
+                        </div>
+                        <p>For aspiring entrepreneurs and startup enthusiasts looking to build the next big thing.</p>
+                        <a href="#" class="register-btn">Register Now</a>
+                    </div>
+                </div>
+            </div>
+            <div class="all-clubs">
+                <h3>All Clubs</h3>
+                <div class="club-grid">
+                    <div class="club-card">
+                        <img src="https://via.placeholder.com/90x90?text=CS" alt="Coding Club" class="club-logo">
+                        <h4 class="club-name">Coding club</h4>
+                        <p class="club-category">coding</p>
+                    </div>
+                    <div class="club-card">
+                        <img src="https://via.placeholder.com/90x90?text=Drama" alt="Developers Club" class="club-logo">
+                        <h4 class="club-name">GDGC</h4>
+                        <p class="club-category">Development</p>
+                    </div>
+                    <div class="club-card">
+                        <img src="https://via.placeholder.com/90x90?text=Music" alt="Music Club" class="club-logo">
+                        <h4 class="club-name">Symphonits</h4>
+                        <p class="club-category">Music</p>
+                    </div>
+                    <div class="club-card">
+                        <img src="https://via.placeholder.com/90x90?text=Sports" alt="Dance Club" class="club-logo">
+                        <h4 class="club-name">Aaveg</h4>
+                        <p class="club-category">Dance</p>
+                    </div>
+                    <div class="club-card">
+                        <img src="https://via.placeholder.com/90x90?text=Env" alt="Environmental Club" class="club-logo">
+                        <h4 class="club-name">Eco club</h4>
+                        <p class="club-category">Social</p>
+                    </div>
+                    <div class="club-card">
+                        <img src="https://via.placeholder.com/90x90?text=Math" alt="Robotics Club" class="club-logo">
+                        <h4 class="club-name">Nerds</h4>
+                        <p class="club-category">Robotics</p>
+                    </div>
+                    <div class="club-card">
+                        <img src="https://via.placeholder.com/90x90?text=Dance" alt="Drama Club" class="club-logo">
+                        <h4 class="club-name">Advay</h4>
+                        <p class="club-category">Drama</p>
+                    </div>
+                    <div class="club-card">
+                        <img src="https://via.placeholder.com/90x90?text=Chess" alt="Literature Club" class="club-logo">
+                        <h4 class="club-name">Illuminits</h4>
+                        <p class="club-category">Literature</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Societies Section -->
+    <section class="societies-section" id="societies">
+        <div class="container">
+            <h2 class="section-title">Societies</h2>
+            <div class="society-grid">
+                <div class="society-card">
+                    <div class="society-header">
+                        <div class="society-icon">
+                            <i class="fas fa-laptop-code"></i>
+                        </div>
+                        <h3 class="society-name">Computer Science Society</h3>
+                    </div>
+                    <div class="society-body">
+                        <p class="society-description">For students pursuing computer science and related fields to collaborate on projects and research.</p>
+                        <a href="#" class="view-more">View More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="society-card">
+                    <div class="society-header">
+                        <div class="society-icon">
+                            <i class="fas fa-sliders-h"></i>
+                        </div>
+                        <h3 class="society-name"> Electronics and Instrumentation Society</h3>
+                    </div>
+                    <div class="society-body">
+                        <p class="society-description">Focused on instrumentation and control systems with hands-on workshops and industry visits.</p>
+                        <a href="#" class="view-more">View More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="society-card">
+                    <div class="society-header">
+                        <div class="society-icon">
+                            <i class="fas fa-microchip"></i>
+                        </div>
+                        <h3 class="society-name">Electronics and Communication Society</h3>
+                    </div>
+                    <div class="society-body">
+                        <p class="society-description">For electronics engineering enthusiasts to explore circuits, embedded systems, and IoT.</p>
+                        <a href="#" class="view-more">View More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="society-card">
+                    <div class="society-header">
+                        <div class="society-icon">
+                            <i class="fas fa-bolt"></i>
+                        </div>
+                        <h3 class="society-name">Electrical Society</h3>
+                    </div>
+                    <div class="society-body">
+                        <p class="society-description">Promoting electrical engineering knowledge through seminars, competitions, and projects.</p>
+                        <a href="#" class="view-more">View More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="society-card">
+                    <div class="society-header">
+                        <div class="society-icon">
+                            <i class="fas fa-cogs"></i>
+                        </div>
+                        <h3 class="society-name">Mechanical Society</h3>
+                    </div>
+                    <div class="society-body">
+                        <p class="society-description">For mechanical engineering students to engage in design challenges and technical workshops.</p>
+                        <a href="#" class="view-more">View More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="society-card">
+                    <div class="society-header">
+                        <div class="society-icon">
+                            <i class="fas fa-building"></i>
+                        </div>
+                        <h3 class="society-name">Civil Society</h3>
+                    </div>
+                    <div class="society-body">
+                        <p class="society-description">Civil engineering and construction technology discussions, site visits, and competitions.</p>
+                        <a href="#" class="view-more">View More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section about">
+                    <img src="https://via.placeholder.com/50x50?text=IU" alt="InvolveU Logo" class="footer-logo">
+                    <p>InvolveU is the premier platform for campus engagement, connecting students with clubs, events, and societies to enhance their university experience.</p>
+                    <div class="socials">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#events"><i class="fas fa-arrow-right"></i> Events</a></li>
+                        <li><a href="#clubs"><i class="fas fa-arrow-right"></i> Clubs</a></li>
+                        <li><a href="#societies"><i class="fas fa-arrow-right"></i> Societies</a></li>
+                        <li><a href="#developers"><i class="fas fa-arrow-right"></i> Developers</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section contact">
+                    <h3>Contact Us</h3>
+                    <p><i class="fas fa-map-marker-alt"></i>NIT Silchar,Assam, India</p>
+                    <p><i class="fas fa-phone"></i> +1 234 567 890</p>
+                    <p><i class="fas fa-envelope"></i> contact@involveu.com</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 InvolveU. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="home.js"></script>
+
+</body>
+</html>
+
+
+
+
+
+

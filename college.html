@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InvolveU - Club Profile</title>
+    <style>
+        /* Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+        }
+        .logout{
+            text-decoration: none;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header Styles */
+        header {
+            background-color: #2c3e50;
+            color: white;
+            padding: 15px 0;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo-section {
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo {
+            width: 40px;
+            height: 40px;
+            margin-right: 15px;
+            background-color: #e74c3c;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+        }
+        
+        .website-name {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        
+        .user-section {
+            display: flex;
+            align-items: center;
+        }
+        
+        .profile, .logout {
+            margin-left: 20px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+        }
+        
+        .profile img, .logout img {
+            width: 24px;
+            height: 24px;
+            margin-right: 5px;
+        }
+        
+        /* Main Content Styles */
+        main {
+            padding: 30px 0;
+        }
+        
+        .section {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            padding: 25px;
+            margin-bottom: 30px;
+        }
+        
+        .section-title {
+            font-size: 20px;
+            margin-bottom: 20px;
+            color: #2c3e50;
+            border-bottom: 2px solid #e74c3c;
+            padding-bottom: 10px;
+        }
+        
+        /* Club Info Section */
+        .club-info-form {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+        
+        .form-group {
+            margin-bottom: 15px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 500;
+        }
+        
+        .form-group input, 
+        .form-group textarea, 
+        .form-group select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+        
+        .form-group textarea {
+            height: 100px;
+            resize: vertical;
+        }
+        
+        .full-width {
+            grid-column: 1 / -1;
+        }
+        
+        .upload-btn {
+            background-color: #e74c3c;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+        
+        .upload-btn:hover {
+            background-color: #c0392b;
+        }
+        
+        /* Events Section */
+        .event-form {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+        
+        .event-item {
+            border: 1px solid #eee;
+            padding: 15px;
+            border-radius: 6px;
+            margin-bottom: 15px;
+            position: relative;
+        }
+        
+        .remove-event {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: #e74c3c;
+            color: white;
+            border: none;
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 12px;
+        }
+        
+        .add-event-btn {
+            background-color: #2c3e50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 10px;
+            transition: background-color 0.3s;
+        }
+        
+        .add-event-btn:hover {
+            background-color: #1a252f;
+        }
+        
+        .submit-events {
+            background-color: #27ae60;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 20px;
+            transition: background-color 0.3s;
+        }
+        
+        .submit-events:hover {
+            background-color: #219653;
+        }
+        
+        /* Footer Styles */
+        footer {
+            background-color: #2c3e50;
+            color: white;
+            padding: 30px 0;
+            text-align: center;
+        }
+        
+        .footer-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .footer-logo {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+        
+        .footer-links {
+            display: flex;
+            margin-bottom: 20px;
+        }
+        
+        .footer-links a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+        }
+        
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+        
+        .copyright {
+            font-size: 14px;
+            opacity: 0.8;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="container header-container">
+            <div class="logo-section">
+                <div class="logo">IU</div>
+                <div class="website-name">involveU</div>
+            </div>
+            <div class="user-section">
+                <div class="profile">
+                    <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="Profile">
+                    <span>Profile</span>
+                </div>
+                <a href="index.html"><div class="logout">
+                    <img src="https://cdn-icons-png.flaticon.com/512/126/126467.png" alt="Logout">
+                    <span>Logout</span>
+                </div></a>
+            </div>
+        </div>
+    </header>
+    
+    <!-- Main Content -->
+    <main class="container">
+        <!-- Club Information Section -->
+        <section class="section">
+            <h2 class="section-title">Club/Society Information</h2>
+            <form class="club-info-form">
+                <div class="form-group">
+                    <label for="club-name">Club/Society Name</label>
+                    <input type="text" id="club-name" placeholder="Enter club/society name">
+                </div>
+                <div class="form-group">
+                    <label for="category">Category</label>
+                    <select id="category">
+                        <option value="">Select category</option>
+                        <option value="technical">Technical</option>
+                        <option value="cultural">Cultural</option>
+                        <option value="sports">Sports</option>
+                        <option value="academic">Academic</option>
+                        <option value="social">Social</option>
+                    </select>
+                </div>
+                <div class="form-group full-width">
+                    <label for="description">Description</label>
+                    <textarea id="description" placeholder="Enter a brief description about your club/society"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="logo">Upload Logo</label>
+                    <input type="file" id="logo">
+                </div>
+                <div class="form-group">
+                    <label for="banner">Upload Banner Image</label>
+                    <input type="file" id="banner">
+                </div>
+                <div class="form-group full-width">
+                    <button type="submit" class="upload-btn">Update Information</button>
+                </div>
+            </form>
+        </section>
+        
+        <!-- Events Section -->
+        <section class="section">
+            <h2 class="section-title">Upcoming Events</h2>
+            <div id="events-container">
+                <!-- Event items will be added here dynamically -->
+                <div class="event-item">
+                    <form class="event-form">
+                        <div class="form-group">
+                            <label for="event-name">Event Name</label>
+                            <input type="text" id="event-name" placeholder="Enter event name">
+                        </div>
+                        <div class="form-group">
+                            <label for="event-date">Event Date</label>
+                            <input type="date" id="event-date">
+                        </div>
+                        <div class="form-group">
+                            <label for="apply-deadline">Application Deadline</label>
+                            <input type="date" id="apply-deadline">
+                        </div>
+                        <div class="form-group">
+                            <label for="event-location">Location</label>
+                            <input type="text" id="event-location" placeholder="Enter event location">
+                        </div>
+                        <div class="form-group full-width">
+                            <label for="event-details">Event Details</label>
+                            <textarea id="event-details" placeholder="Enter event description and details"></textarea>
+                        </div>
+                        <div class="form-group full-width">
+                            <label for="g-form-link">Google Form Link</label>
+                            <input type="url" id="g-form-link" placeholder="Enter Google Form URL">
+                        </div>
+                        <button type="button" class="remove-event">×</button>
+                    </form>
+                </div>
+            </div>
+            <button type="button" class="add-event-btn" id="add-event">+ Add Another Event</button>
+            <button type="submit" class="submit-events">Submit All Events</button>
+        </section>
+    </main>
+    
+    <!-- Footer Section -->
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-logo">involveU</div>
+            <div class="footer-links">
+                <a href="#">About Us</a>
+                <a href="#">Contact</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">FAQ</a>
+            </div>
+            <div class="copyright">
+                &copy; 2023 InvolveU. All rights reserved.
+            </div>
+        </div>
+    </footer>
+    
+    <script>
+        // JavaScript for adding/removing event forms
+        document.getElementById('add-event').addEventListener('click', function() {
+            const eventsContainer = document.getElementById('events-container');
+            const newEvent = document.createElement('div');
+            newEvent.className = 'event-item';
+            newEvent.innerHTML = `
+                <form class="event-form">
+                    <div class="form-group">
+                        <label for="event-name">Event Name</label>
+                        <input type="text" id="event-name" placeholder="Enter event name">
+                    </div>
+                    <div class="form-group">
+                        <label for="event-date">Event Date</label>
+                        <input type="date" id="event-date">
+                    </div>
+                    <div class="form-group">
+                        <label for="apply-deadline">Application Deadline</label>
+                        <input type="date" id="apply-deadline">
+                    </div>
+                    <div class="form-group">
+                        <label for="event-location">Location</label>
+                        <input type="text" id="event-location" placeholder="Enter event location">
+                    </div>
+                    <div class="form-group full-width">
+                        <label for="event-details">Event Details</label>
+                        <textarea id="event-details" placeholder="Enter event description and details"></textarea>
+                    </div>
+                    <div class="form-group full-width">
+                        <label for="g-form-link">Google Form Link</label>
+                        <input type="url" id="g-form-link" placeholder="Enter Google Form URL">
+                    </div>
+                    <button type="button" class="remove-event">×</button>
+                </form>
+            `;
+            eventsContainer.appendChild(newEvent);
+            
+            // Add event listener to the new remove button
+            newEvent.querySelector('.remove-event').addEventListener('click', function() {
+                eventsContainer.removeChild(newEvent);
+            });
+        });
+        
+        // Add event listener to the initial remove button
+        document.querySelector('.remove-event').addEventListener('click', function() {
+            const eventItem = this.closest('.event-item');
+            document.getElementById('events-container').removeChild(eventItem);
+        });
+    </script>
+</body>
+</html>

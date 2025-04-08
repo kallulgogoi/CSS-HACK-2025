@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile - InvolveU</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="profile.css">
+</head>
+<body>
+    <div class="profile-container">
+        <div class="profile-header">
+            <a href="student.html" class="back-btn">
+                <i class="fas fa-arrow-left"></i> Back
+            </a>
+            <h2 class="profile-title">My Profile</h2>
+            <div></div> <!-- Spacer -->
+        </div>
+        
+        <div class="profile-info">
+            <img src="profile.png" class="profile-avatar" id="profileAvatar">
+            <h3 class="profile-name" id="profileName">Weber</h3>
+            <p class="profile-email" id="profileEmail">Weber@example.com</p>
+        </div>
+        
+        <div class="profile-details">
+            <div class="detail-item">
+                <span class="detail-label">Student ID</span>
+                <span id="studentId">S20230045</span>
+            </div>
+            <div class="detail-item">
+                <span class="detail-label">Department</span>
+                <span id="department">Computer Science</span>
+            </div>
+            <div class="detail-item">
+                <span class="detail-label">Year</span>
+                <span id="year">3rd Year</span>
+            </div>
+        </div>
+        
+        <button class="logout-btn" id="logoutBtn">
+            <i class="fas fa-sign-out-alt"></i> Logout
+        </button>
+    </div>
+
+    <script>
+        // Load user data (simplified version)
+        document.addEventListener('DOMContentLoaded', function() {
+            // Get user data from localStorage or use defaults
+            const user = JSON.parse(localStorage.getItem('currentUser')) || {
+                name: 'WEBER',
+                email: 'WEBER@example.com',
+                studentId: '22120045',
+                department: 'Computer Science',
+                year: '3rd Year'
+            };
+            
+            // Display user data
+            document.getElementById('profileName').textContent = user.name;
+            document.getElementById('profileEmail').textContent = user.email;
+            document.getElementById('studentId').textContent = user.studentId;
+            document.getElementById('department').textContent = user.department;
+            document.getElementById('year').textContent = user.year;
+            
+            // Logout functionality
+            document.getElementById('logoutBtn').addEventListener('click', function() {
+                localStorage.removeItem('currentUser');
+                window.location.href = 'index.html';
+            });
+        });
+    </script>
+</body>
+</html>

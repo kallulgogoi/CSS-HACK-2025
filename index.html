@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InvolveU - Campus Engagement Platform</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Logo Section -->
+        <div class="logo-section">
+            <div class="logo pulse">
+                <img src="logo.png" alt="logo" height="100px" width="100px">
+            </div>
+            <h1 class="logo-text">InvolveU</h1>
+            <p class="tagline">Your gateway to campus engagement</p>
+        </div>
+
+        <!-- Main Content Grid -->
+        <div class="main-content">
+            <!-- Auth Section -->
+            <div class="auth-container">
+                <!-- Student Auth Column -->
+                <div class="auth-column">
+                    <div class="auth-tabs">
+                        <div class="auth-tab student-tab active" id="studentTab">Student</div>
+                    </div>
+                    
+                    <!-- Student Login Box -->
+                    <div class="auth-box" id="studentLoginBox">
+                        <h2 class="auth-title student-title">Student Login</h2>
+                        <form id="studentLoginForm">
+                            <div class="form-group">
+                                <label for="studentLoginEmail">Email</label>
+                                <input type="email" id="studentLoginEmail" placeholder="Enter your email" required>
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="form-group">
+                                <label for="studentLoginPassword">Password</label>
+                                <input type="password" id="studentLoginPassword" placeholder="Enter your password" required>
+                                <i class="fas fa-lock"></i>
+                            </div>
+                            <button type="submit" class="btn btn-primary">
+                                <i class="fas fa-sign-in-alt"></i> Login
+                            </button>
+                        </form>
+                        <div class="auth-footer">
+                            <p>Don't have an account? <a href="#" id="showStudentSignup">Sign up</a></p>
+                        </div>
+                    </div>
+
+                    <!-- Student Signup Box (hidden initially) -->
+                    <div class="auth-box" id="studentSignupBox" style="display: none;">
+                        <h2 class="auth-title student-title">Student Sign Up</h2>
+                        <form id="studentSignupForm">
+                            <div class="form-group">
+                                <label for="studentSignupName">Full Name</label>
+                                <input type="text" id="studentSignupName" placeholder="Enter your full name" required>
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <div class="form-group">
+                                <label for="studentSignupEmail">Email</label>
+                                <input type="email" id="studentSignupEmail" placeholder="Enter your email" required>
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="form-group">
+                                <label for="studentSignupPassword">Password</label>
+                                <input type="password" id="studentSignupPassword" placeholder="Create a password" required>
+                                <i class="fas fa-lock"></i>
+                            </div>
+                            <div class="form-group">
+                                <label for="studentSignupConfirm">Confirm Password</label>
+                                <input type="password" id="studentSignupConfirm" placeholder="Confirm your password" required>
+                                <i class="fas fa-lock"></i>
+                            </div>
+                            <div class="form-group">
+                                <label for="studentSignupId">Student ID</label>
+                                <input type="text" id="studentSignupId" placeholder="Enter your student ID" required>
+                                <i class="fas fa-id-card"></i>
+                            </div>
+                            <button type="submit" class="btn btn-primary">
+                                <i class="fas fa-user-plus"></i> Sign Up
+                            </button>
+                        </form>
+                        <div class="auth-footer">
+                            <p>Already have an account? <a href="#" id="showStudentLogin">Login</a></p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Institution Auth Column -->
+                <div class="auth-column">
+                    <div class="auth-tabs">
+                        <div class="auth-tab institution-tab active" id="institutionTab">Institution</div>
+                    </div>
+                    
+                    <!-- Institution Login Box -->
+                    <div class="auth-box" id="institutionLoginBox">
+                        <h2 class="auth-title institution-title">Institution Login</h2>
+                        <form id="institutionLoginForm">
+                            <div class="form-group">
+                                <label for="institutionLoginEmail">Email</label>
+                                <input type="email" id="institutionLoginEmail" placeholder="Enter institution email" required>
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="form-group">
+                                <label for="institutionLoginPassword">Password</label>
+                                <input type="password" id="institutionLoginPassword" placeholder="Enter your password" required>
+                                <i class="fas fa-lock"></i>
+                            </div>
+                            <button type="submit" class="btn btn-institution">
+                                <i class="fas fa-sign-in-alt"></i> Login
+                            </button>
+                        </form>
+                        <div class="auth-footer">
+                            <p>Don't have an account? <a href="#" id="showInstitutionSignup">Sign up</a></p>
+                        </div>
+                    </div>
+
+                    <!-- Institution Signup Box (hidden initially) -->
+                    <div class="auth-box" id="institutionSignupBox" style="display: none;">
+                        <h2 class="auth-title institution-title">Institution Sign Up</h2>
+                        <form id="institutionSignupForm">
+                            <div class="form-group">
+                                <label for="institutionSignupName">Institution Name</label>
+                                <input type="text" id="institutionSignupName" placeholder="Enter institution name" required>
+                                <i class="fas fa-university"></i>
+                            </div>
+                            <div class="form-group">
+                                <label for="institutionSignupEmail">Email</label>
+                                <input type="email" id="institutionSignupEmail" placeholder="Enter institution email" required>
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="form-group">
+                                <label for="institutionSignupPassword">Password</label>
+                                <input type="password" id="institutionSignupPassword" placeholder="Create a password" required>
+                                <i class="fas fa-lock"></i>
+                            </div>
+                            <div class="form-group">
+                                <label for="institutionSignupConfirm">Confirm Password</label>
+                                <input type="password" id="institutionSignupConfirm" placeholder="Confirm your password" required>
+                                <i class="fas fa-lock"></i>
+                            </div>
+                            <div class="form-group">
+                                <label for="institutionSignupCode">Institution Code</label>
+                                <input type="text" id="institutionSignupCode" placeholder="Enter institution code" required>
+                                <i class="fas fa-key"></i>
+                            </div>
+                            <button type="submit" class="btn btn-institution">
+                                <i class="fas fa-user-plus"></i> Sign Up
+                            </button>
+                        </form>
+                        <div class="auth-footer">
+                            <p>Already have an account? <a href="#" id="showInstitutionLogin">Login</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- About Section -->
+            <div class="about-section">
+                <h2 class="about-title">About InvolveU</h2>
+                <div class="about-content">
+                    <div class="about-text">
+                        <p>InvolveU is a revolutionary campus engagement platform designed to connect students with clubs, organizations, and events across your university.</p>
+                        <p>Our mission is to streamline campus involvement, making it easier for students to discover opportunities and for organizations to manage their activities.</p>
+                        <p>With InvolveU, you'll never miss an important event or meeting again, and you'll always be in the loop about what's happening on campus.</p>
+                    </div>
+                    <div class="about-features">
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <i class="fas fa-calendar-alt"></i>
+                            </div>
+                            <div class="feature-text">
+                                <h4>Event Management</h4>
+                                <p>Browse and register for campus events with just a few clicks.</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <div class="feature-text">
+                                <h4>Club Discovery</h4>
+                                <p>Find and join student organizations that match your interests.</p>
+                            </div>
+                        </div>
+                        <div class="feature-item institution-feature">
+                            <div class="feature-icon">
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+                            <div class="feature-text">
+                                <h4>Analytics Dashboard</h4>
+                                <p>Institutions get powerful tools to track engagement and participation.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
